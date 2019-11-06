@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (response.body.error) {
             callback('unable do find !weather!', undefined)
         } else {
-            callback(undefined, response.body.daily.data[0].summary + ' Temperature: ' + response.body.currently.temperature + ' Rain: ' + response.body.currently.precipProbability + ' %')
+            callback(undefined, response.body.daily.data[0].summary + ' Temperature: ' + response.body.currently.temperature + ' Max temperature :' + response.body.daily.data[0].temperatureHigh + ' Min temperature: ' + response.body.daily.data[0].temperatureLow + '. Rain: ' + response.body.currently.precipProbability + ' %')
         }
     })
 }

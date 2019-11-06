@@ -23,7 +23,7 @@ app.use(express.static(publicDirectoryPath));
 //Render views
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather App para o Pras!',
+        title: 'Weather App!',
         name: 'Cactus'
     })
 });
